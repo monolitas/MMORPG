@@ -3,87 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:;">
-  <title>Fantasy MMORPG</title>
+  <title>MMORPG Reviews</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">MMORPG Reviews</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#games">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Reviews</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero">
-    <nav>
-      <div class="logo">
-        <img src="assets/logo.png" alt="Fantasy MMORPG Logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h1>Enter a World of Fantasy</h1>
-      <p>Embark on epic quests, forge alliances, and conquer realms in the ultimate MMORPG experience.</p>
-      <a href="#features" class="btn">Explore Features</a>
+  <section id="home" class="hero text-center text-white">
+    <div class="container">
+      <h1 class="display-4">Welcome to MMORPG Reviews</h1>
+      <p class="lead">Your ultimate source for in-depth MMORPG reviews and ratings.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About the Game</h2>
-    <p>Step into a vast, immersive world filled with magic, monsters, and endless adventures. Build your legacy and become a legend.</p>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <h2>Game Features</h2>
-    <div class="feature-grid">
-      <div class="feature-item">
-        <img src="assets/icons/sword.png" alt="Combat Icon">
-        <h3>Epic Combat</h3>
-        <p>Master powerful skills and engage in thrilling battles.</p>
-      </div>
-      <div class="feature-item">
-        <img src="assets/icons/quest.png" alt="Quests Icon">
-        <h3>Challenging Quests</h3>
-        <p>Uncover secrets and complete legendary quests.</p>
-      </div>
-      <div class="feature-item">
-        <img src="assets/icons/guild.png" alt="Guilds Icon">
-        <h3>Join Guilds</h3>
-        <p>Team up with players and conquer the world together.</p>
+  <!-- Games Section -->
+  <section id="games" class="games py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Featured MMORPGs</h2>
+      <div class="row" id="game-list">
+        <!-- Games will be dynamically added here -->
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="assets/gallery1.jpg" alt="Fantasy World">
-      <img src="assets/gallery2.jpg" alt="Epic Battles">
-      <img src="assets/gallery3.jpg" alt="Magical Creatures">
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Submit a Review</h2>
+      <form id="review-form">
+        <div class="mb-3">
+          <label for="game-select" class="form-label">Select Game</label>
+          <select class="form-select" id="game-select" required>
+            <!-- Options will be dynamically added -->
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="review-text" class="form-label">Your Review</label>
+          <textarea class="form-control" id="review-text" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="rating" class="form-label">Rating (1-5)</label>
+          <input type="number" class="form-control" id="rating" min="1" max="5" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+      </form>
+      <div id="review-list" class="mt-5">
+        <!-- Reviews will be dynamically added here -->
+      </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Join the Adventure</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Sign Up</button>
-    </form>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 Fantasy MMORPG. All rights reserved.</p>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 MMORPG Reviews. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
