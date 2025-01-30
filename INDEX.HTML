@@ -4,84 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MMORPG Reviews</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">MMORPG Reviews</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#games">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reviews">Reviews</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Header -->
+  <header>
+    <h1>MMORPG Reviews</h1>
+    <p>Your source for honest MMORPG reviews.</p>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero text-center text-white">
-    <div class="container">
-      <h1 class="display-4">Welcome to MMORPG Reviews</h1>
-      <p class="lead">Your ultimate source for in-depth MMORPG reviews and ratings.</p>
-    </div>
-  </section>
+  <!-- Add Review Form -->
+  <section id="add-review">
+    <h2>Add a Review</h2>
+    <form id="review-form">
+      <label for="game-name">Game Name:</label>
+      <input type="text" id="game-name" required>
 
-  <!-- Games Section -->
-  <section id="games" class="games py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Featured MMORPGs</h2>
-      <div class="row" id="game-list">
-        <!-- Games will be dynamically added here -->
-      </div>
-    </div>
+      <label for="review-text">Your Review:</label>
+      <textarea id="review-text" rows="4" required></textarea>
+
+      <label for="rating">Rating (1-5):</label>
+      <input type="number" id="rating" min="1" max="5" required>
+
+      <button type="submit">Add Review</button>
+    </form>
   </section>
 
   <!-- Reviews Section -->
-  <section id="reviews" class="reviews py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Submit a Review</h2>
-      <form id="review-form">
-        <div class="mb-3">
-          <label for="game-select" class="form-label">Select Game</label>
-          <select class="form-select" id="game-select" required>
-            <!-- Options will be dynamically added -->
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="review-text" class="form-label">Your Review</label>
-          <textarea class="form-control" id="review-text" rows="3" required></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="rating" class="form-label">Rating (1-5)</label>
-          <input type="number" class="form-control" id="rating" min="1" max="5" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Review</button>
-      </form>
-      <div id="review-list" class="mt-5">
-        <!-- Reviews will be dynamically added here -->
-      </div>
+  <section id="reviews">
+    <h2>Game Reviews</h2>
+    <div id="review-list">
+      <!-- Reviews will be dynamically added here -->
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2023 MMORPG Reviews. All rights reserved.</p>
-  </footer>
+  <!-- Pre-Written Review for Lineage 2 ElmoreLab -->
+  <section id="lineage2-review">
+    <h2>Lineage 2 ElmoreLab Server Review</h2>
+    <div class="review-item">
+      <h3>Lineage 2 ElmoreLab</h3>
+      <p><strong>Rating:</strong> 4.8/5</p>
+      <p>
+        Lineage 2 ElmoreLab is a fantastic private server that brings back the classic Lineage 2 experience. 
+        The server is well-balanced, with a strong focus on PvP and clan wars. The community is active and welcoming, 
+        and the developers are constantly updating the game to ensure a smooth experience. If you're a fan of old-school 
+        MMORPGs, this server is a must-try!
+      </p>
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
