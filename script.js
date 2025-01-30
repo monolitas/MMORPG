@@ -16,9 +16,9 @@ const games = [
   },
   {
     id: 3,
-    name: "Guild Wars 2",
+    name: "qqq,
     description: "A dynamic MMORPG with a focus on exploration and events.",
-    image: "assets/images/gw2.jpg",
+    image: "assets/images/gqq.jpg",
     rating: 4.3
   }
 ];
